@@ -5,6 +5,7 @@ describe('page', () => {
 
     cy.get('#google-map-demo').type('Denver')    
 
-    cy.get('#Denver').click()
+    // cy.get('#Denver').should('be.visible').click()
+    cy.findAllByText('Denver').first().should('be.visible').click()
   })
 })
